@@ -3,23 +3,6 @@ Colors used:
 Primary Color (Blue): #05676e
 Secondary Color (Green): #489c79
 */
-header {
-    background color: #ff44c4;
-    padding: 10px 5px;
-    margin: 10px; 
-    border-bottom: 3px solid #4a4a4a
-}
-selector {
-    margin: 0 auto; 
-    display: inline-block;
-    position: relative;
-    float: right;
-    width: 80%;
-}
-.container {
-    max-wdith: 1200px;
-}
-
 a {color: ff7f50;
     text-decoration: none;
 }
@@ -43,9 +26,6 @@ img {
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Lato:300;400;700" rel="stylesheet">
 </head>
-* {
-    box-sizing: border-box;
-}
 
 body {
     background-color: #lightgrey
@@ -104,4 +84,56 @@ h4 {
 .button.contract:hover {
     background-color: #ff7f50;
     color: #ffffff;
+}
+
+/* start of exercise 1.7 */
+/*Layout Styling */
+.container {
+    padding: 0 15px;
+}
+
+.row [
+    margin: 25px 0; 
+]
+
+#work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
+
+#hero h1 {
+    text-align: center; 
+    background-color: #ffe4c4
+    margin: 0;
+    padding: 0.67em 0;
+}
+
+.logo {
+    max-width: 250px;
+}
+
+header {
+    background-color: #ffe4c4;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    display: inline-block;
+}
+
+nav > ul > li > a:visited {
+    list-style-type: none;
+    padding: 0 15px;
+    display: inline-block;
+    width: 100%
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #4a4a4a
+}
+
+css-box-shadow{
+	/*start ------------*/
+	width: [object Object]px; 
+	height: [object Object]px; 
+	background: #F8F8F8; 
+	border: solid #BDBDBD 1px; 
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
+	-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
+	-moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
 }
