@@ -3,6 +3,22 @@ Colors used:
 Primary Color (Blue): #05676e
 Secondary Color (Green): #489c79
 */
+header {
+    background color: #ff44c4;
+    padding: 10px 5px;
+    margin: 10px; 
+    border-bottom: 3px solid #4a4a4a
+}
+selector {
+    margin: 0 auto; 
+    display: inline-block;
+    position: relative;
+    float: right;
+    width: 80%;
+}
+.container {
+    max-wdith: 1200px;
+}
 
 a {color: ff7f50;
     text-decoration: none;
@@ -27,6 +43,9 @@ img {
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Lato:300;400;700" rel="stylesheet">
 </head>
+* {
+    box-sizing: border-box;
+}
 
 body {
     background-color: #lightgrey
