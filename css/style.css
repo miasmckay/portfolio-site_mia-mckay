@@ -117,7 +117,7 @@ box-sizing: border-box;
 }
 
 header {
-    background-color: #0567e0;
+    background-color: #ffe4c4;
     text-align: center;
     padding: 20px 0;
     position: relative;
@@ -130,7 +130,8 @@ nav > ul > li > a:visited {
     display: inline-block;
     text-transform: uppercase;
     font-weight: 700;
-    color: #4a4a4a
+    color: #4a4a4a;
+
 }
 
 
