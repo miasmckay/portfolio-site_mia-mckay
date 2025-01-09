@@ -4,45 +4,59 @@ Primary Color (Blue): #05676e
 Secondary Color (Green): #489c79
 */
 
-/*Apply box-sizing to all elements*/ 
-*{
+/* Apply box-sizing to all elements */
+* {
     box-sizing: border-box;
 }
-/*Link styling */
-a {
-    color: #ff7f50;
-    text-decoration: none;
+/*animation*/
+@keyframes color-change {
+    0% {fill: #edc655;}
+    50% {fill: #f76414;}
+    100% {fill: #f76414;}
+}
+@keyframes cloud-move {
+    from {transform: translate(0px, 0px);}to {transform: translate(200px, 50px);}
+}
+@keyframes cloud-move-reverse {
+    from {transform: translate(446px, 48px);}
+    to {transform: translate(100px, 48px);}
 }
 
-a:hover,
-a:focus {
-    color: #cc6540;
-    text-decoration: underline; 
+.tree {
+    animation: color-change 4s infinite alternate linear;
 }
 
-a:visited {
-    color: #ff7f50;
+.cloud-front {
+    animation: cloud-move 30s infinite alternate linear;
 }
-a:active {
-    color: #994c30;
+
+.cloud-back {
+    animation: cloud-move-reverse 34s infinite alternate linear;
 }
 
 /* Image styling */
 img {
     width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
-/*Body styling */
+.wellwise-circle-logo {
+    max-width: 200px;  
+    height: auto;
+}
+
+/* Body styling */
 body {
     background-color: lightgrey;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-    font-weight: 300; 
-    line-height: 1.6; 
+    font-weight: 300;
+    line-height: 1.6;
     color: #4a4a4a;
 }
 
-/*Header text styling */
+/* Header text styling */
 h1, h2, h3, h4 {
     line-height: 1.4;
 }
@@ -66,12 +80,12 @@ h4 {
     font-weight: 400;
 }
 
-/*Button styling */
+/* Button styling */
 .button {
-    display: inline-block; 
+    display: inline-block;
     background-color: #ff7f50;
-    color: #ffffff; 
-    font-weight: 400; 
+    color: #ffffff;
+    font-weight: 400;
     padding: 10px;
     border-radius: 3px;
     border-bottom: 2px solid #994c30;
@@ -82,151 +96,145 @@ h4 {
     text-decoration: none;
 }
 
-.button.contract {
-    background-color: transparent;
-    color: #ff7f50;
-    text-transform: uppercase;
-    border: 2px solid #ff7f50;
-}
-
-.button.contract:hover {
-    background-color: #ff7f50;
-    color: #ffffff;
-}
-
-/*Layout styling */
+/* Layout styling */
 .container {
     padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .row {
-    margin: 25px 0; 
+    margin: 25px 0;
 }
 
-#work .row { 
-    padding-bottom: 25px; 
-    border-bottom: 1px solid #4a4a4a; 
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 #hero h1 {
-    text-align: center; 
+    text-align: center;
     background-color: #ffe4c4;
     margin: 0;
     padding: 0.67em 0;
 }
 
-/*Logo styling */
-.logo {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    object-fit: contain;
-}
-
-/*Header styling */
+/* Header styling */
 header {
     background-color: #ffe4c4;
     text-align: center;
     padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    display: inline-block;
     width: 100%;
 }
 
-/*Navigation styling */
-nav > ul > li > a:visited {
+/* Navigation styling */
+nav > ul {
     list-style-type: none;
-    padding: 0 15px;
-    display: inline-block;
-    text-transform: uppercase;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav > ul > li {
+    margin: 0 15px;
+}
+
+nav > ul > li > a {
     font-weight: 700;
     color: #4a4a4a;
-
+    text-transform: uppercase;
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
 }
 
-/*Box shadows */
-css-box-shadow {
-	width: 300px; 
-	height: 300px; 
-	background: #F8F8F8; 
-	border: solid #BDBDBD 1px; 
-	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
-	-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
-	-moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
+nav > ul > li > a:hover {
+    color: #cc6540;
+    text-decoration: underline;
 }
 
-/*Media Queries */
+/* 2-column layout */
+.col-2 {
+    width: 48%;
+    margin: 1%;
+    float: left;
+}
 
-/*=========================
-Medium devices (640px and larger)
-=========================== */
+.col-2 img {
+    width: 100%;
+}
+
+/* General container for the skills and tools section */
+#skills-tools {
+    padding: 40px 0;
+}
+.skills-tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.skills, .tools {
+    flex: 1; 
+}
+
+@media (min-width: 1024px) {
+    .skills {
+        flex: 0 0 60%; /* 60% width for the Skills column on large screens */
+    }
+    .tools {
+        flex: 0 0 40%; /* 40% width for the Tools column on large screens */
+    }
+}
+
+.skills ul, .tools ul {
+    list-style: none;
+    padding: 0;
+}
+
+/*medium devices*/
 @media only screen and (min-width: 640px) {
     header {
-        text-align: unset;
+        text-align: left;
         padding: 20px 0 13px;
     }
     nav {
-        width:auto;
         float: right;
-        margin-top: 4px;
     }
-    main {
-        padding: 0;
-    }
+
     #hero span {
         display: block;
         text-align: center;
     }
-    body {
-        font-size: 16px;
-    }
-    [class="col-6"] {
-        float:left;
-        width: 50%;
-        box-sizing: border-box;
-        padding: 15px;
-    }
-    }
-    .row:: after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-    #about-page h3 { margin-top: 0;}
 }
 
-/*==========================
-Large devices (1024px or larger)
-============================ */
+/* Large devices (1024px or larger) */
 @media only screen and (min-width: 1024px) {
     .col-lg-7 {
-        width: 75%
+        width: 75%;
+    }
+    .col-2 {
+        width: 48%;
+        margin: 1%;
     }
 }
 
-/*===========================
-X-large devices (1440px or larger)
-============================= */
+/* X-large devices (1440px or larger) */
 @media only screen and (min-width: 1440px) {
+    .col-2 {
+        width: 48%;
+        margin: 1%;
+    }
 }
 
-/*============================
-Extra-large devices (1920px or larger)
-============================== */
+/* Extra-large devices (1920px or larger) */
 @media only screen and (min-width: 1920px) {
-}
-
-/*container max width */
-.container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;4
+    .col-2 {
+        width: 48%;
+    }
 }
