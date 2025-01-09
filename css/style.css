@@ -3,10 +3,17 @@ Colors used:
 Primary Color (Blue): #05676e
 Secondary Color (Green): #489c79
 */
+
+/*Apply box-sizing to all elements*/ 
+*{
+    box-sizing: border-box;
+}
+/*Link styling */
 a {
     color: #ff7f50;
     text-decoration: none;
 }
+
 a:hover,
 a:focus {
     color: #cc6540;
@@ -20,14 +27,12 @@ a:active {
     color: #994c30;
 }
 
+/* Image styling */
 img {
     width: 100%;
 }
 
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:300;400;700" rel="stylesheet">
-</head>
-
+/*Body styling */
 body {
     background-color: lightgrey;
     font-family: 'Lato', sans-serif;
@@ -37,6 +42,7 @@ body {
     color: #4a4a4a;
 }
 
+/*Header text styling */
 h1, h2, h3, h4 {
     line-height: 1.4;
 }
@@ -60,6 +66,7 @@ h4 {
     font-weight: 400;
 }
 
+/*Button styling */
 .button {
     display: inline-block; 
     background-color: #ff7f50;
@@ -87,11 +94,7 @@ h4 {
     color: #ffffff;
 }
 
-/* start of exercise 1.7 */
-/*Layout Styling */
-
-box-sizing: border-box;
-
+/*Layout styling */
 .container {
     padding: 0 15px;
 }
@@ -112,18 +115,33 @@ box-sizing: border-box;
     padding: 0.67em 0;
 }
 
+/*Logo styling */
 .logo {
-    max-width: 250px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.logo img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+
+/*Header styling */
 header {
     background-color: #ffe4c4;
     text-align: center;
     padding: 20px 0;
     position: relative;
     display: inline-block;
+    width: 100%;
 }
 
+/*Navigation styling */
 nav > ul > li > a:visited {
     list-style-type: none;
     padding: 0 15px;
@@ -134,7 +152,7 @@ nav > ul > li > a:visited {
 
 }
 
-
+/*Box shadows */
 css-box-shadow {
 	width: 300px; 
 	height: 300px; 
@@ -144,6 +162,8 @@ css-box-shadow {
 	-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
 	-moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
 }
+
+/*Media Queries */
 
 /*=========================
 Medium devices (640px and larger)
@@ -159,7 +179,7 @@ Medium devices (640px and larger)
         margin-top: 4px;
     }
     main {
-        padding: 99px;
+        padding: 0;
     }
     #hero span {
         display: block;
@@ -168,8 +188,12 @@ Medium devices (640px and larger)
     body {
         font-size: 16px;
     }
-    .col-md-6 {
-        width: 50%
+    [class="col-6"] {
+        float:left;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 15px;
+    }
     }
     .row:: after {
         content: "";
@@ -178,6 +202,7 @@ Medium devices (640px and larger)
     }
     #about-page h3 { margin-top: 0;}
 }
+
 /*==========================
 Large devices (1024px or larger)
 ============================ */
@@ -186,19 +211,22 @@ Large devices (1024px or larger)
         width: 75%
     }
 }
+
 /*===========================
 X-large devices (1440px or larger)
 ============================= */
 @media only screen and (min-width: 1440px) {
 }
+
 /*============================
 Extra-large devices (1920px or larger)
 ============================== */
 @media only screen and (min-width: 1920px) {
 }
 
+/*container max width */
 .container {
     max-width: 1200px;
     margin-left: auto;
-    margin-right: autho;4
+    margin-right: auto;4
 }
