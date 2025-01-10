@@ -130,27 +130,23 @@ header {
     align-items: center;
     position: relative;
     width: 100%;
-    main {
-    padding-top: 56px;
-    }
 }
 
-/*header hamburger menu base code (others in media query)*/ 
-.navtoggle, .navtoggle.responsive {
-    position: relative;
-  }
-  .navtoggle li .icon {
-    position: absolute;
-    right: 0;
-    top: 2px;
-    font-size: 20px;
-    padding-right: 0;
-  }
-
 /* Navigation styling */
+.navtoggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .navtoggle.responsive nav {
     padding: 24px 0 0;
   }
+
+  .navtoggle .icon {
+    display: none;
+  }
+
   .navtoggle.responsive li  {
     display: block;
     padding: 10px 0;
@@ -230,7 +226,7 @@ nav > ul > li > a:hover {
     padding: 0;
 }
 
-/*medium devices*/
+/*mobile devices*/
 @media only screen and (min-width: 641px) {
     header {
         text-align: left;
