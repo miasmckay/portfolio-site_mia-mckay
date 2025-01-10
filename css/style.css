@@ -48,10 +48,9 @@ h4 {
 header {
     background-color: #ffe4c4;
     padding: 10px 0 4px;
-    display: fixed;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: fixed;
     width: 100%;
 }
 
@@ -200,12 +199,20 @@ section {
 
 /*animation for cloud movement*/
 @keyframes cloud-move {
-    from {transform: translateX(0px);}
-    to {transform: translateX(200px);}
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(200px);
+    }
 }
 @keyframes cloud-move-reverse {
-    from {transform: translate(446px, 48px);}
-    to {transform: translate(100px, 48px);}
+    from {
+        transform: translate(446px, 48px);
+    }
+    to {
+        transform: translate(100px, 48px);
+    }
 }
 .cloud-front {
     animation: cloud-move 30s infinite alternate linear;
@@ -213,7 +220,7 @@ section {
 .cloud-back {
     animation: cloud-move-reverse 34s infinite alternate linear;
 }
----------------------------------
+
 /* Navigation styling */
 .navtoggle {
     display: flex;
@@ -247,9 +254,6 @@ nav > ul {
     margin: 0;
     }
 }
-.contact 
-onclick="menuToggle()"
-
 
 /* container skills and tools section */
 #skills-tools {
@@ -344,7 +348,7 @@ onclick="menuToggle()"
       }
 }
 
----------------------------------------------
+
 /*items on a list */
 var list = $("ul");
 var listItems = list.find("li");

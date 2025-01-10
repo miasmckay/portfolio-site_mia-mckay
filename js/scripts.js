@@ -9,3 +9,7 @@ function menuToggle() {
       }
     
 }
+
+
+.contact 
+onclick="menuToggle()"
