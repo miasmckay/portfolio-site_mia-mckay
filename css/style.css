@@ -78,59 +78,6 @@ header img {
     height:auto;
 }
 
-
-/*animation for color change of tree*/
-@keyframes color-change {
-    0% { fill: #edc655; }
-    50% { fill: #f76414; }
-    100% { fill: #800080; }
-}
-.tree {
-    animation: color-change 4s infinite alternate linear;
-}
-
-/*animation for cloud movement*/
-@keyframes cloud-move {
-    from {transform: translateX(0px);}
-    to {transform: translateX(200px);}
-}
-@keyframes cloud-move-reverse {
-    from {transform: translate(446px, 48px);}
-    to {transform: translate(100px, 48px);}
-}
-.cloud-front {
-    animation: cloud-move 30s infinite alternate linear;
-}
-.cloud-back {
-    animation: cloud-move-reverse 34s infinite alternate linear;
-}
-----------------------------------
-/*2nd column for project 2*/
-#ski-animation-project {
-    background color:#05676e;
-    padding: 40px 0;
-    text-align: center;
-}
-#ski-animation-project h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-.clouds {
-    position: relative;
-    width: 100%;
-    top: 50px;
-}
-.tree {
-    position: fixed;
-    bottom: 50px;
-}
-
-.cloud-front {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-}
------------------------------------
 /* Image styling */
 img {
     width: 100%;
@@ -144,7 +91,7 @@ img {
 }
 
 
-/* Button styling */
+/* Button styling & transition*/
 .button {
     display: inline-block;
     background-color: #ff7f50;
@@ -176,14 +123,97 @@ img {
     clear: both;
     display: table;
 }
-#hero h1 {
+
+/*column sections*/
+section {
+    padding: 60px 20px;
+}
+
+#hero {
     text-align: center;
     background-color: #ffe4c4;
     margin: 0;
     padding: 0.67em 0;
 }
 
+/*2-column layout */
+.col-2 {
+    width: 48%;
+    margin: 1%;
+    float: left;
+}
 
+.col-2 img {
+    width: 100%;
+} 
+
+/*2nd column project 2*/
+#ski-animation-project {
+    background-color:#05676e;
+    padding: 40px 0;
+    text-align: center;
+}
+#ski-animation-project h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#ski-animation-project svg {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: auto;
+}
+
+.clouds {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+}
+.tree {
+    position: absolute;
+    bottom: 50px;
+}
+
+.cloud-front {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.cloud-back {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+}
+
+
+/*animation for color change of tree*/
+@keyframes color-change {
+    0% { fill: #edc655; }
+    50% { fill: #f76414; }
+    100% { fill: #800080; }
+}
+.tree {
+    animation: color-change 4s infinite alternate linear;
+}
+
+/*animation for cloud movement*/
+@keyframes cloud-move {
+    from {transform: translateX(0px);}
+    to {transform: translateX(200px);}
+}
+@keyframes cloud-move-reverse {
+    from {transform: translate(446px, 48px);}
+    to {transform: translate(100px, 48px);}
+}
+.cloud-front {
+    animation: cloud-move 30s infinite alternate linear;
+}
+.cloud-back {
+    animation: cloud-move-reverse 34s infinite alternate linear;
+}
+---------------------------------
 /* Navigation styling */
 .navtoggle {
     display: flex;
@@ -212,28 +242,16 @@ img {
 nav > ul {
     list-style-type: none;
     padding: 0;
-    display: fixed;
+    display: flex;
     justify-content: center;
-    margin: ul {
-        margin: 1em 0;
+    margin: 0;
     }
 }
 .contact 
 onclick="menuToggle()"
 
 
-/* 2-column layout */
-.col-2 {
-    width: 48%;
-    margin: 1%;
-    float: left;
-}
-
-.col-2 img {
-    width: 100%;
-}
-
-/* General container for the skills and tools section */
+/* container skills and tools section */
 #skills-tools {
     padding: 40px 0;
 }
@@ -247,22 +265,17 @@ onclick="menuToggle()"
     flex: 1; 
 }
 
-@media (min-width: 1024px) {
-    .skills {
-        flex: 0 0 60%; /* 60% width for the Skills column on large screens */
-    }
-    .tools {
-        flex: 0 0 40%; /* 40% width for the Tools column on large screens */
-    }
-}
-
 .skills ul, .tools ul {
     list-style: none;
     padding: 0;
 }
 
+
+---------------------------------------
+/*media queries*/
+
 /*mobile devices*/
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 640px) {
     header {
         text-align: left;
         padding: 20px 0 13px;
@@ -282,9 +295,27 @@ onclick="menuToggle()"
         display: inline-block;
       }
 }
+  
+/*smaller screens*/
+.button {
+    padding: 8px;
+    font-size: 14px;
+}
+.col-2 {
+    width: 100%;
+    margin: 10px 0;
+    float: none;
+}
+#ski-animation-project h2 {
+    font-size: 2em;
+}
+
 
 /* Large devices (1024px or larger) */
 @media only screen and (min-width: 1024px) {
+    header {
+        padding: 20px 50px;
+    }
     .col-lg-7 {
         width: 75%;
     }
@@ -292,31 +323,28 @@ onclick="menuToggle()"
         width: 48%;
         margin: 1%;
     }
-    /*adding to the larger devices that won't have a menu*/
     nav > ul > li {
         display: inline-block
     }
-    /*navigation menu icon */
-.navtoggle li:last-child {
-    display: none;
-  }
+
+
+/* 2nd column layout in about page for skills and tools*/
+    .skills {
+        flex: 0 0 60%; /* 60% width */
+    }
+    .tools {
+        flex: 0 0 40%; /* 40% width */
+    }
+    .button {
+        padding: 12px;
+        font-size: 16px;
+    }
+    .navtoggle li:not(:last-child) {
+        display: none;
+      }
 }
 
-/* X-large devices (1440px or larger) */
-@media only screen and (min-width: 1440px) {
-    .col-2 {
-        width: 48%;
-        margin: 1%;
-    }
-    nav > ul > li {
-        display: inline-block
-    }
-    /*navigation menu icon */
-.navtoggle li:last-child {
-    display: none;
-  }
-}
-
+---------------------------------------------
 /*items on a list */
 var list = $("ul");
 var listItems = list.find("li");
