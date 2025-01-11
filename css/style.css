@@ -48,9 +48,9 @@ h4 {
 header {
     background-color: #ffe4c4;
     padding: 10px 0 4px;
-    justify-content: center;
     align-items: center;
     position: fixed;
+    display: inline-block;
     width: 100%;
 }
 
@@ -59,7 +59,6 @@ nav > ul > li {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: center;
     margin: 0;
 }
 
@@ -80,6 +79,10 @@ nav > ul > li > a:hover {
 header img {
     max-width: 150px;
     height:auto;
+}
+
+selector {
+    float: right;
 }
 
 /* Image styling */
@@ -113,9 +116,9 @@ img {
 
 /* Layout styling */
 .container {
-    padding: 0 15px;
+    padding: auto;
     max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 0;
 }
 
 .row {
@@ -129,8 +132,14 @@ img {
 }
 
 /*column sections*/
-section {
+selector {
     padding: 60px 20px;
+}
+main {
+    padding-top: 133px;
+}
+[class*="col-2"] {
+    float: left;
 }
 
 #hero {
