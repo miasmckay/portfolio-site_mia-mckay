@@ -81,10 +81,6 @@ header img {
     height:auto;
 }
 
-selector {
-    float: right;
-}
-
 /* Image styling */
 img {
     width: 100%;
@@ -132,14 +128,8 @@ img {
 }
 
 /*column sections*/
-selector {
-    padding: 60px 20px;
-}
 main {
     padding-top: 133px;
-}
-[class*="col-2"] {
-    float: left;
 }
 
 #hero {
@@ -148,17 +138,6 @@ main {
     margin: 0;
     padding: 0.67em 0;
 }
-
-/*2-column layout */
-.col-2 {
-    width: 48%;
-    margin: 1%;
-    float: left;
-}
-
-.col-2 img {
-    width: 100%;
-} 
 
 /*2nd column project 2*/
 #ski-animation-project {
@@ -267,7 +246,6 @@ nav > ul {
     justify-content: center;
     margin: 0;
     }
-}
 
 /* container skills and tools section */
 #skills-tools {
@@ -342,7 +320,6 @@ nav > ul {
     nav > ul > li {
         display: inline-block
     }
-
 
 /* 2nd column layout in about page for skills and tools*/
     .skills {
