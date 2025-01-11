@@ -11,7 +11,7 @@ Secondary Color (Green): #489c79
 
 /* Body styling */
 body {
-    background-color: lightgrey;
+    background-color: #ffe4c4;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -20,15 +20,19 @@ body {
 }
 
 /* Header text styling */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     line-height: 1.4;
 }
+
 h1 {
     font-size: 2.75em;
     font-weight: 700;
 }
 
-h2 { 
+h2 {
     font-size: 2.25em;
     font-weight: 700;
 }
@@ -38,7 +42,7 @@ h3 {
     font-weight: 400;
 }
 
-h4 { 
+h4 {
     font-size: 1.35em;
     font-weight: 400;
 }
@@ -46,7 +50,7 @@ h4 {
 
 /*Header styling */
 header {
-    background-color: #ffe4c4;
+    background-color: #cb924b;
     padding: 10px 0 4px;
     align-items: center;
     position: fixed;
@@ -54,7 +58,7 @@ header {
     width: 100%;
 }
 
-nav > ul > li {
+nav>ul>li {
     margin: 0 15px;
     list-style-type: none;
     padding: 0;
@@ -62,7 +66,7 @@ nav > ul > li {
     margin: 0;
 }
 
-nav > ul > li > a {
+nav>ul>li>a {
     font-weight: 700;
     color: #4a4a4a;
     text-transform: uppercase;
@@ -71,14 +75,14 @@ nav > ul > li > a {
     text-decoration: none;
 }
 
-nav > ul > li > a:hover {
+nav>ul>li>a:hover {
     color: #cc6540;
     text-decoration: underline;
 }
 
 header img {
-    max-width: 150px;
-    height:auto;
+    max-width: 300px;
+    height: auto;
 }
 
 /* Image styling */
@@ -89,7 +93,7 @@ img {
 }
 
 .wellwise-circle-logo {
-    max-width: 200px;  
+    max-width: 200px;
     height: auto;
 }
 
@@ -105,6 +109,7 @@ img {
     border-bottom: 2px solid #994c30;
     transition: 0.2s opacity;
 }
+
 .button:hover {
     opacity: 0.8;
     text-decoration: none;
@@ -114,7 +119,7 @@ img {
 .container {
     padding: auto;
     max-width: 1200px;
-    margin-top: 0;
+    margin: 0 auto;
 }
 
 .row {
@@ -139,32 +144,10 @@ main {
     padding: 0.67em 0;
 }
 
-/*2nd column project 2*/
-#ski-animation-project {
-    background-color:#05676e;
-    padding: 40px 0;
-    text-align: center;
-}
-#ski-animation-project h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-#ski-animation-project svg {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    margin: auto;
-}
-
 .clouds {
     position: absolute;
     width: 100%;
     top: 50px;
-}
-.tree {
-    position: absolute;
-    bottom: 50px;
 }
 
 .cloud-front {
@@ -179,15 +162,22 @@ main {
     left: 50px;
 }
 
-
-/*animation for color change of tree*/
+/*animation for color change */
 @keyframes color-change {
-    0% { fill: #edc655; }
-    50% { fill: #f76414; }
-    100% { fill: #800080; }
+    0% {
+        fill: #edc655;
+    }
+
+    50% {
+        fill: #fcffad;
+    }
+
+    100% {
+        fill: #f76414;
+    }
 }
-.tree {
-    animation: color-change 4s infinite alternate linear;
+.sun {
+    animation: 4s color-change infinite alternate linear;
 }
 
 /*animation for cloud movement*/
@@ -195,21 +185,26 @@ main {
     from {
         transform: translateX(0px);
     }
+
     to {
         transform: translateX(200px);
     }
 }
+
 @keyframes cloud-move-reverse {
     from {
         transform: translate(446px, 48px);
     }
+
     to {
         transform: translate(100px, 48px);
     }
 }
+
 .cloud-front {
     animation: cloud-move 30s infinite alternate linear;
 }
+
 .cloud-back {
     animation: cloud-move-reverse 34s infinite alternate linear;
 }
@@ -223,61 +218,70 @@ main {
 
 .navtoggle.responsive nav {
     padding: 24px 0 0;
-  }
+}
 
-  .navtoggle .icon {
+.navtoggle .icon {
     display: none;
-  }
+}
 
-  .navtoggle.responsive li  {
+.navtoggle.responsive li {
     display: block;
     padding: 10px 0;
-    border-top: 1px solid rgba(255,127,80,0.5);
-  }
-  
-  .navtoggle.responsive li:last-child  {
-    padding: 0 0 10px;
-  }
+    border-top: 1px solid rgba(255, 127, 80, 0.5);
+}
 
-nav > ul {
+.navtoggle.responsive li:last-child {
+    padding: 0 0 10px;
+}
+
+nav>ul {
     list-style-type: none;
     padding: 0;
     display: flex;
     justify-content: center;
     margin: 0;
-    }
+}
 
 /* container skills and tools section */
 #skills-tools {
     padding: 40px 0;
 }
+
 .skills-tools-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px; 
+    gap: 20px;
 }
 
-.skills, .tools {
-    flex: 1; 
+.skills,
+.tools {
+    flex: 1;
 }
 
-.skills ul, .tools ul {
+.skills ul,
+.tools ul {
     list-style: none;
     padding: 0;
 }
 
-/*media queries*/
+.social-icon {
+    height: 75px;
+    width: 75px;
+}
 
-/*mobile devices*/
-@media only screen and (max-width: 640px) {
+/*media queries-- gives conditions, overrides everything else that applies all the time */
+
+/*medium devices*/
+@media only screen and (min-width: 640px) {
     header {
         text-align: left;
         padding: 20px 0 13px;
     }
+
     nav {
         float: right;
     }
-    nav > ul > li {
+
+    nav>ul>li {
         display: inline-block
     }
 
@@ -285,21 +289,29 @@ nav > ul {
         display: block;
         text-align: center;
     }
+
     .navtoggle li:not(:last-child) {
         display: inline-block;
-      }
+    }
+
+    .col-md-6 {
+        width: 50%;
+    }
+
+    [class*="col-"] {
+        float: left;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
 }
-  
+
 /*smaller screens*/
 .button {
     padding: 8px;
     font-size: 14px;
 }
-.col-2 {
-    width: 100%;
-    margin: 10px 0;
-    float: none;
-}
+
 #ski-animation-project h2 {
     font-size: 2em;
 }
@@ -310,35 +322,36 @@ nav > ul {
     header {
         padding: 20px 50px;
     }
+
     .col-lg-7 {
-        width:75%;
+        width: 60%;
     }
-    .col-2 {
-        width: 48%;
-        margin: 1%;
+
+    .col-lg-5 {
+        width: 40%;
     }
-    nav > ul > li {
+
+    nav>ul>li {
         display: inline-block
     }
 
-/* 2nd column layout in about page for skills and tools*/
+    /* 2nd column layout in about page for skills and tools*/
     .skills {
-        flex: 0 0 60%; /* 60% width */
+        flex: 0 0 60%;
+        /* 60% width */
     }
+
     .tools {
-        flex: 0 0 40%; /* 40% width */
+        flex: 0 0 40%;
+        /* 40% width */
     }
+
     .button {
         padding: 12px;
         font-size: 16px;
     }
+
     .navtoggle li:not(:last-child) {
         display: none;
-      }
+    }
 }
-
-
-/*items on a list */
-var list = $("ul");
-var listItems = list.find("li");
-listItems.hide();
