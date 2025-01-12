@@ -97,24 +97,6 @@ img {
     height: auto;
 }
 
-
-/* Button styling & transition*/
-.button {
-    display: inline-block;
-    background-color: #ff7f50;
-    color: #ffffff;
-    font-weight: 400;
-    padding: 10px;
-    border-radius: 3px;
-    border-bottom: 2px solid #994c30;
-    transition: 0.2s opacity;
-}
-
-.button:hover {
-    opacity: 0.8;
-    text-decoration: none;
-}
-
 /* Layout styling */
 .container {
     padding: auto;
@@ -130,6 +112,10 @@ img {
     content: "";
     clear: both;
     display: table;
+}
+
+.project-title {
+    margin-top: 0;
 }
 
 /*column sections*/
@@ -176,6 +162,7 @@ main {
         fill: #f76414;
     }
 }
+
 .sun {
     animation: 4s color-change infinite alternate linear;
 }
@@ -354,4 +341,44 @@ nav>ul {
     .navtoggle li:not(:last-child) {
         display: none;
     }
+}
+
+/* Button styling & transition*/
+
+.resume-button:active {
+    .button {
+        display: inline-block;
+        background-color: #ff7f50;
+        color: #ff7f50;
+        font-weight: 400;
+        padding: 10px;
+        border-radius: 3px;
+        border-bottom: 2px solid #994c30;
+        transition: 0.2s opacity;
+    }
+}
+
+.read-more-button:active {
+    .button {
+        display: inline-block;
+        background-color: #ff7f50;
+        color: #ff7f50;
+        font-weight: 400;
+        padding: 10px;
+        border-radius: 3px;
+        border-bottom: 2px solid #994c30;
+        transition: 0.2s opacity;
+    }
+}
+
+.email-button:active {
+    background-color: transparent;
+    color: #ff7f50;
+    text-transform: uppercase;
+    border: 2px solid #ff7f50;
+}
+
+.email-button:hover {
+    background-color: #ff7f50;
+    color: #ffffff
 }
